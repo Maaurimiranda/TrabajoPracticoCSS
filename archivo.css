@@ -1,0 +1,181 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+
+.parrafo1 {
+    text-transform: capitalize;
+    text-decoration: underline;
+
+}
+
+.cita1 {
+    background-color: #f0f0f0;
+    padding-left: 5px;
+    border-left: 5px solid grey;
+    padding: 10px;
+}
+
+.box1 {
+    border: 1px solid black;
+    width: 95%;
+    height: 45px;
+
+    background-color: white;
+    margin: 10px;
+    box-shadow: 1px 1px 6px 1px black;
+    border-radius: 3px; /* Radio de 10 píxeles para redondear todos los bordes */
+
+    align-items: center; /* Centra el contenido verticalmente */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto del elemento */
+    padding: 0px 10px; /* Ajusta el padding solo en los laterales */
+
+}
+
+.box2 {
+    border: 3px solid black;
+    width: 95%;
+    height: 45px;
+
+    background-color: #FAD6A5;
+    margin: 10px;
+    box-shadow: 1px 1px 6px 1px black;
+    border-radius: 3px;
+
+    align-items: center; /* Centra el contenido verticalmente */
+    box-sizing: border-box; /* Incluye el padding y el borde en el ancho y alto del elemento */
+    padding: 0px 10px; /* Ajusta el padding solo en los laterales */
+}
+
+.box3 {
+    position: relative;
+    padding: 10px;
+    background-color: #e0f7fa; /* Color de fondo similar al de la imagen */
+    border: 1px solid #b0bec5; /* Borde */
+    height: 45px; /* Altura fija para la caja relativa */
+    display: flex;
+    align-items: center;
+
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+.box4 {
+    position: absolute;
+    top: 15%;
+    left: 45%;
+    background-color: #4db6ac; /* Color de fondo de la caja interna */
+    padding: 10px;
+    border-radius: 4px; /* Esquinas redondeadas */
+    color: white; /* Texto blanco */
+    display: flex;
+    align-items: center;
+    height: 45px;
+    width: 45%;
+
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px; /* Espacio entre los elementos */
+    padding: 20px;
+    background-color: #88a8bb; /* Color de fondo del contenedor */
+    margin: 20px 0;
+}
+
+.grid-item {
+    background-color: #617fb8; /* Fondo de los elementos de la cuadrícula */
+    padding: 20px;
+    color: white;
+    font-size: 12px;
+    text-align: center; /* Alineación centrada del texto */
+    border-radius: 4px; /* Bordes redondeados */
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+}
+
+/* Media Query para pantallas con ancho máximo de 768px */
+@media (max-width: 768px) {
+    body {
+        background-color: #383838; 
+        color: #1d1d1d;
+    }
+
+    header {
+        font-size: large; 
+    }
+
+    h3 {
+        font-size: 1.2rem; 
+    }
+
+    section {
+        max-width: 90%; 
+        padding: 10px; 
+        background-color: #444; 
+    }
+
+    .box1, .box2 {
+        width: 100%; 
+        padding: 5px; 
+    }
+
+    .box3, .box4 {
+        font-size: 10px;
+        height: auto; 
+    }
+}
+
+.box1, .box2, .box3, .box4 {
+    display: flex; /* Usamos flexbox */
+    align-items: center; /* Centrado vertical */
+    padding: 10px; /* Agregamos un padding uniforme */
+    margin: 10px; /* Espacio entre cajas */
+    box-sizing: border-box; /* Incluye padding y borde en el tamaño total */
+}
+
+/* Nueva sección para animaciones y transiciones */
+.animacion {
+    width: 150px;
+    height: 150px;
+    background-color: #1eff00;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.animacion:hover {
+    background-color: #1eff00;
+}
+
+.mover {
+    width: 100px;
+    height: 100px;
+    background-color: #1eff00;
+    position: relative;
+    animation: moverIzqDer 3s infinite linear;
+    margin: 20px;
+    border-radius: 50%; /* Hace que el cuadrado sea un círculo */
+}
+
+/* Definición de la animación para mover el div */
+@keyframes moverIzqDer {
+    0% {
+        left: 0;
+    }
+    50% {
+        left: calc(100% - 100px);
+    }
+    100% {
+        left: 0;
+    }
+}
